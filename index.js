@@ -17,7 +17,8 @@ app.get("/api",(req,res)=>{
 });
 
 app.post("/api1",(req,res)=>{
-    db.insert(req.body);
-    req.body.status="Success";
-    res.json(req.body);
+    var response = req.body;
+    db.insert(response);
+    response.status="Success";
+    res.json(response);
 })
