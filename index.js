@@ -13,10 +13,9 @@ app.get("/api",(req,res)=>{
     db.find({},(err,d)=>{
         res.json(d);
     })
-    
 });
 
-app.post("/api1",(req,res)=>{
+app.post("/apiTest",(req,res)=>{
     var response = req.body;
     db.insert(response);
     response.status="Success";
