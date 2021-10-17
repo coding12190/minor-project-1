@@ -20,4 +20,4 @@ app.post("/apiTest",(req,res)=>{
     db.insert(response);
     response.status="Success";
     res.json(response);
-})
+});
