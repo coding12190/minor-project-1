@@ -4,7 +4,7 @@ const Datastore=require("nedb");
 const db=new Datastore("./data.db");
 
 db.loadDatabase();
-const port= 3000;
+const port= process.env.PORT || 3000;
 app.listen(port,()=>console.log(`Server started at port ${port}...`));
 app.use(express.static("public"));
 app.use(express.json());
